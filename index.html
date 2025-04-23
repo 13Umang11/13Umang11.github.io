@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Test API Call</title></head>
+<body>
+  <h1>API Data</h1>
+  <pre id="output">Loading...</pre>
+  <script>
+    fetch("https://18.218.244.10/students/all")
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+      })
+      .catch(err => {
+        document.getElementById('output').textContent = 'Error: ' + err;
+      });
+  </script>
+</body>
+</html>
