@@ -8,9 +8,11 @@
     fetch("https://18.218.244.10/students/all")
       .then(response => response.json())
       .then(data => {
+        comsole.log("data=>",data )
         document.getElementById('output').textContent = JSON.stringify(data, null, 2);
       })
       .catch(err => {
+        comsole.log("data=>",data )
         document.getElementById('output').textContent = 'Error: ' + err;
       });
   </script>
